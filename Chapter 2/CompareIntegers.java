@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Arithmetic {
+public class CompareIntegers {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -10,9 +10,11 @@ public class Arithmetic {
         System.out.print("Enter second integer: ");
         int b = input.nextInt();
 
-        System.out.printf("Sum is %d%n", a + b);
-        System.out.printf("Product is %d%n", a * b);
-        System.out.printf("Difference is %d%n", a - b);
-        System.out.printf("Quotient is %d%n", a / b);
+        if (a > b)
+            System.out.printf("%d is larger%n", a);
+        else if (b > a)
+            System.out.printf("%d is larger%n", b);
+        else
+            System.out.println("These numbers are equal");
     }
 }
